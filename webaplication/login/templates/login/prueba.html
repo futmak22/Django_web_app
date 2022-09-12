@@ -1,0 +1,12 @@
+{% if user %}
+    <h1>Correo: <h3>{{user.email}}</h3></h1>
+    <h1>Primer Nombre: <h3>{{user.first_name}}</h3></h1>
+    <h1>Segundo Nombre: <h3>{{user.last_name}}</h3></h1>
+    <h1>Ultimo ingreso: <h3>{{user.last_login}}</h3></h1>
+    <h1>Creado: <h3>{{user.date_joined}}</h3></h1>
+    <a  href="{% url 'login:logout_user' %}">
+        <button class="w-100 btn btn-lg btn-primary">Sign out</button>
+    </a>
+{% else %}
+    {{user}} <!--Anonimo-->
+{% endif %}
