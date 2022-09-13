@@ -118,7 +118,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/' #path, where django will look for files to be served.
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -127,3 +127,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #The absolute file system path to hold uploaded-files
 MEDIA_ROOT = 'drag_drop/media/'
+
+#Ruta a la que se redirecionará cuando se intenta ingresar a una ruta sin estar logueado.
+LOGIN_URL = ''
