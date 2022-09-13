@@ -61,11 +61,11 @@
             <div class="row border border-secondary rounded">
                 <div class="col-6">
                     <div class="m-2">
-                        <form action="{% url 'drag_drop:drag_drop_screen'%}" enctype="multipart/form-data" method="post">
+                        <form action="{% url 'drag_drop:drag_drop_screen'%}" enctype="multipart/form-data" method="POST">
                             {% csrf_token %}
                             <div class="mb-3">
-                            <label "myfile" class="form-label">First File</label>
-                            <input type="file" class="form-control" id="first_file" aria-describedby="emailHelp">
+                            <label id="myfile" class="form-label">First File</label>
+                            <input type="file" class="form-control" name="First_File" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">Select your file.</div>
                             </div>
                             <button type="submit" class="btn btn-success">Upload</button>
@@ -73,20 +73,33 @@
                     </div>
                 </div>
 
-                <div class="col-6">
+                <!--div class="col-6">
                     <div class="m-2">
-                        <form enctype="multipart/form-data" method="post">
+                        <form enctype="multipart/form-data" method="POST">
                             <div class="mb-3">
-                            <label "myfile" class="form-label">Second File</label>
+                            <label id="myfile" class="form-label">Second File</label>
                             <input type="file" class="form-control" id="first_file" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">Select your file.</div>
                             </div>
                             <button type="submit" class="btn btn-primary">Upload</button>
                         </form>
                     </div>
-                </div>
+                </div-->
             </div>
+
+            {% if messages %}
+                {% for message in messages %}
+                    
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Carga de Archivo: </strong>{{message}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    
+                {% endfor %}
+            {% endif %}
         </div>
+        
+        
 
     {% else %}
         <h1 class="bg-danger">El usuario es {{user}}</h1>
