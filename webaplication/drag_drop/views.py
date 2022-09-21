@@ -23,6 +23,6 @@ def upload_file(request):
         
         return render(request, 'drag_drop/loadfileform.html')
     
-    #Si el usuario no está autenticado:
+    #Si el usuario no está autenticado, redirecciona a la pagina de LOG IN:
     else:
         return redirect('login:login_user')
