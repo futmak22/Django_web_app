@@ -9,10 +9,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <title>Upload Formats App</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'login/images/Visty.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'login/images/turn_on.jpg' %}">
 
-    <!--link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/"-->
-    
     <!-- JavaScript Bundle with Popper -->
     <script src="{% static 'login/js/bootstrap.bundle.min.js'%}" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
@@ -95,21 +93,21 @@
 
     <form action="" method="POST">
       {% csrf_token %}
-        <img class="mb-4" src="{% static 'login/images/Visty.png' %}" alt="" width="200" height="200">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <img class="mb-4 shadow-lg rounded-circle" src="{% static 'login/images/turn_on.jpg' %}" alt="" width="200" height="200">
+        <h1 class="h3 mb-3 fw-normal">Please Sign In</h1>
                 
         <div class="form-floating">
-            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Username</label>
+            <input type="text" name="username" class="form-control text-center" id="floatingInput" placeholder="name@example.com">
+            <label class="text-center"for="floatingInput">Username</label>
         </div>
         <div class="form-floating">
-            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <input type="password" name="password" class="form-control text-center" id="floatingPassword" placeholder="Password">
+            <label class="text-center" for="floatingPassword">Password</label>
         </div>
        
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
         
-        <p class="mt-5 mb-3 text-muted">&copy; 2022-Current</p>
+        <p class="mt-5 mb-3 text-muted">&copy; 2020-Current</p>
     </form>
   </main>
 
